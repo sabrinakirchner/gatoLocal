@@ -1,13 +1,204 @@
+/* CSS Custom Properties */
+:root {
+  --white: #D4E2D4;
+  --black: #000000;
+  /*--dark-gray: #333333;*/
+  /*--gray: #666666;*/
+  /*--light-gray: #999999;*/
+  /*--lighter-gray: #cccccc;*/
+  /*--primary: #2c3e50;*/
+  /*--accent: #33b5e5;*/
+  --max-width: 460px;
+  --gutters: 24px;
+  --thin: 100;
+  --light: 300;
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
+  --orange: #71518f; /*loggin button click*/
+  --text-light: #7950aa; /*form letters name, email*/
+  --text-dark: #121007; /*form letters*/
+  --tan-1: #FBF9F6;
+  --tan-2: #FFCACC;
+  --tan-3: #FFCACC;
+  --tan-4: #FAF3F0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--tan-4);
+  padding: 2rem;
+  height: 100vh;
+  overflow: auto;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+.align-ctr {
+  text-align: center;
+}
+
+.align-rt {
+  text-align: right;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.flex-ctr-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--tan-1);
+  color: var(--text-dark);
+  border: .1rem solid var(--tan-3);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-container {
+  padding:  3rem 5rem 2rem 2rem; /*box content form*/
+  background-color: var(--tan-1);
+  border: .1rem solid var(--tan-3);
+  border-radius: 2rem;
+
+}
+
+
+.logo{
+  width: 200px; /* size*/
+  margin-bottom: 5px; 
+}
+
+.logo-container {
+  margin-top: 100px; /* space on top of the logo */
+}
+
+
+p.error-message {
+  color: var(--orange);
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.1rem;
+  color: var(--text-light);
+}
+
+/*form letters*/
+label {
+  font-size: 0.9rem; 
+  display: flex;
+  align-items: center;
+}
+
+/**/
+input {
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  border: .1rem solid var(--tan-3);
+  border-radius: 1rem;
+  color: var(--text-dark);
+  background-image: none !important; 
+  outline: none;
+}
+
+
+/**/
+input:focus {
+  border-color: var(--orange);
+}
+
+/**/
+button, a.button {
+  margin: 9rem;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--orange);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: .1rem solid var(--tan-2);
+  border-radius: 2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+
+button.btn-sm {
+  font-size: 1.5rem;
+  padding: .6rem .8rem;
+}
+
+button.btn-xs {
+  font-size: 1rem;
+  padding: .4rem .5rem;
+}
+
+button:disabled, form:invalid button[type="submit"] {
+  cursor: not-allowed;
+  background-color: var(--tan-4);
+}
+
+button[type="submit"] {
+  grid-column: span 2;
+  margin: 0.5rem 0 0;
+} 
+
+.auth-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; 
+
+}
+
+
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
+    float: none; /* Remove float for responsiveness */
+  }
 }
