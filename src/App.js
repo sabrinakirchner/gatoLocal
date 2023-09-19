@@ -6,14 +6,17 @@ import AuthPage from './pages/AuthPage';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route,  Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import {PetfinderProvider} from './petfinderContext'
 
 //import { getUser } from './utilities/users-service'; 
 
+
 function App() {
+
   const [User, setUser] = useState()
   return (
     <div className="App">
-      
+    <PetfinderProvider>
       {User ? 
       <>
         <BrowserRouter>
@@ -27,6 +30,7 @@ function App() {
       </>
       :<AuthPage setUser={setUser}/>
       }
+      </PetfinderProvider>
     </div>
   );
 }

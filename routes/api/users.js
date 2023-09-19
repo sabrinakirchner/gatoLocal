@@ -9,7 +9,7 @@ router.post('/login', usersCtrl.login);
 
 router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
 
-// Handle 404 errors (route not found)
+// Handle 404 ( not found)
 router.use((req, res, next) => {
     res.status(404).json({ error: 'Route not found' });
   });

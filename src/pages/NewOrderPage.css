@@ -1,0 +1,29 @@
+.center-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+
+  }
+
+  .center-container input {
+    padding: 2vh;
+    padding-right: 50vh;
+    text-align: center;
+    border: 20px solid #DBC4F0; 
+    border-radius: 8rem;
+  }
+
+  .center-container button {
+    background-color: #D4E2D4; 
+    color: #140a0a; 
+      margin: none;
+      padding: 10px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8rem;
+      cursor: pointer;
+  }

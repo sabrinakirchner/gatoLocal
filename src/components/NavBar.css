@@ -1,0 +1,76 @@
+
+.navbar {
+    background-color: #FFCACC;
+    color: #c9abab;
+    padding: 10px 20px;
+  }
+    
+  .navbar a {
+    color: #110d0d; 
+    padding: 10px 10px; 
+    text-align:20px;
+  }
+
+
+  .nav-link{
+    background-color: #D4E2D4; 
+    color: #140a0a; 
+    padding: 6px;
+    padding-top: 0px; 
+    padding-bottom: 20px; 
+  }
+
+
+  .nav.item{
+    background-color: #D4E2D4; 
+    color: #140a0a; 
+      margin: none;
+      padding: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8rem;
+      cursor: pointer;
+  }
+  
+
+  .d-flex{
+    background-color: #D4E2D4; 
+    color: #140a0a; 
+    margin: none;
+    padding: 0.1px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8rem;
+    cursor: pointer;
+  } 
+
+ 
+.navbar-home{
+  background-color: #D4E2D4; 
+  color: #140a0a; 
+    margin: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8rem;
+    cursor: pointer;
+}
+
+.navbar-cat{
+  background-color: #D4E2D4; 
+  color: #140a0a; 
+    margin: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8rem;
+    cursor: pointer;
+}

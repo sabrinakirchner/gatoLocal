@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import * as usersService from '../../utilities/users-service';
+import { PetfinderContext } from '../../petfinderContext';
+//import { getToken } from '../../utilities/petfinder-api'
+import { fetchPetfinderToken } from '../../utilities/petfinder-api';
+
 
 export default function LogInForm({ setUser }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
   });
+  
   const [error, setError] = useState('');
+  const { setPetfinderToken } = useContext(PetfinderContext);
+
 
   function handleChange  (evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
@@ -22,6 +29,13 @@ export default function LogInForm({ setUser }) {
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
+      
+      const token = await fetchPetfinderToken();
+      console.log("Petfinder token fetched:", token);
+
+      //set token
+      setPetfinderToken(token);
+      
     } catch {
       setError('Log In Failed - Try Again');
     }

@@ -1,18 +1,18 @@
 import React from 'react'
-import * as userService from '../utilities/users-service'
+//import { useNavegate } from 'react-router-dom';
 
-export default function OrderHistoryPage() {
 
-  const handleCheckToken = async () => {
-    const expDate = await userService.checkToken()
-    console.log(expDate);
-  }
-
+export default function OrderHistoryPage(props) {
   return (
     <div>
-        <h1>OrderHistoryPage</h1>
-        <button onClick={handleCheckToken}>Check When My Login Expires</button>
+        <h1>Cats that I liked!</h1>
+
     </div>
-  )
+  );
 }
+  
+  
+ 
+  
+
 
